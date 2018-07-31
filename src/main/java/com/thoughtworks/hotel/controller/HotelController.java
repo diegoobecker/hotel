@@ -41,4 +41,10 @@ public class HotelController {
         hotelRepository.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> update(@RequestBody Hotel student) {
+        hotelRepository.save(student);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
