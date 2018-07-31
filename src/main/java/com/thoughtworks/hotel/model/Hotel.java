@@ -22,6 +22,10 @@ public class Hotel implements Serializable {
     private Double priceAwardWeek;
     private Double priceAwardWeekend;
 
+    public Hotel(String title) {
+        this.title = title;
+    }
+
     public Long getId() {
         return id;
     }
