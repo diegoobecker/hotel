@@ -35,4 +35,10 @@ public class HotelController {
     public ResponseEntity<?> save(@RequestBody Hotel hotel) {
         return new ResponseEntity<>(hotelRepository.save(hotel), HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+        hotelRepository.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
